@@ -1,0 +1,308 @@
+/* Element Selector */
+body {
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+  }
+/* Exercise 3 */
+
+  /* Hero Layout */
+  .hero {
+    width:100%;
+    align-items:flex-end;
+    justify-content: space-between;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+  }
+  
+  /* Sticky Navigation */
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px 20px;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    
+  }
+  
+  /* Navigation Links */
+  .nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition:color 0.3s ease;
+}
+
+.nav li a:hover {
+  color: #6d8799;
+  }
+  
+  /* Display Variations */
+  .nav li {
+    display: inline-block;
+    
+  }
+ 
+  .hero-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* Left Text Content */
+  .content {
+    max-width: 50%;
+    z-index: 1;
+    font-weight: bold;
+    padding:30px;
+  }
+  
+  .content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    padding:20px;
+  }
+  
+  .content p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .content button {
+    padding: 10px 18px;
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  
+  .hero-bg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    opacity: 0.9;
+    position: static;  
+    padding:20px;
+    margin-top: 30px;
+    
+  }
+
+  /* Bonus Responsive Layout */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .content {
+      max-width: 100%;
+    }
+  
+    .hero-bg {
+      position: relative;
+      width: 100%;
+      opacity: 0.3;
+    }
+  }
+  
+
+
+  /* Exercise 1 */
+  
+  /* ID Selector */
+  #profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+  }
+  
+  /* Class Selector */
+  .card {
+    position: relative;
+    width: 300px;
+    background-color: #f0ecec;
+    border: 4px solid #000;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    transition: transform 0.8s ease, box-shadow 1.2s ease-out;
+  }
+  
+  /* Descendant Selector */
+  .card .image img {
+    width: 200px;
+    height: 180px;
+    border-radius: 50%;
+  }
+  
+  /* Child Selector */
+  .card  h3 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-right:10px;
+  }
+  
+  /* Pseudo-class */
+  .card:hover {
+    background-color: #e9f6f6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(43, 40, 40, 0.2);
+  }
+  
+  /* Pseudo-element ::before for ribbon badge */
+  .card::before {
+    content: "★";
+    position: absolute;
+    top: -10px;
+  }
+
+  .social {
+    list-style: none;        
+    padding: 0;              
+    display: flex;           
+    gap: 15px;               
+    justify-content: center;
+  }
+  
+  .social li {
+    display: inline;        
+  }
+  
+  .social a {
+    text-decoration: none;   
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .social a:hover {
+    color: #0077b5;          
+  }
+
+  /* Attribute selector for email links */
+a[href^="mailto"] {
+    color: crimson;
+    font-style: italic;
+  }
+
+
+/* Exercise 2 */
+
+ /* Pricing Table Container */
+.pricing {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 60px;
+  }
+  
+  .basic {
+    box-sizing: content-box;
+  }
+  
+  .popular,
+  .premium {
+    box-sizing: border-box;
+  }
+  /* Common Plan Styling */
+  .plan {
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    font-weight:lighter;
+    position: relative; 
+    transition: transform 0.3s ease;
+  }
+  
+  .plan h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .plan p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .plan ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .plan ul li {
+    margin: 6px 0;
+    font-size: 0.9rem;
+  }
+  
+  .plan button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #0077b5;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.8s ease,background-color 0.3s ease;
+  }
+  
+  .plan button:hover {
+    background-color: #005fa3;
+    transform:scale(1.08);
+  }
+
+  .popular::before {
+    content: "Most Popular";
+    position: absolute;
+    top: -12px;
+    left: 60%;
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    padding: 5px 8px;
+    font-size: 0.7rem;
+    border-radius: 12px;
+  }
+
+
+  /* here’s what i learned 
+  From exercise 1:
+-  I learned how to structure semantic HTML by building profile cards from scratch.
+-  I explored CSS selectors deeply—using element, class, ID, descendant, child, and attribute types in one project.
+-  I used :hover pseudo-classes to add clean interactivity to cards and links.
+-  I styled inline social links using flexbox and eliminated bullets using list-style: none.
+-  I incorporated mailto: links and styled them with attribute selectors—giving them unique visual identity.
+-  Debugging layout and hierarchy step by step helped me improve responsiveness and precision.
+
+ From exercise 2:
+- I practiced building a flexible, responsive layout using flexbox and spacing with gap.
+-  I explored box-sizing by applying content-box vs border-box to compare sizing behavior.
+-  I styled boxes with consistent padding, margin, border-radius, and box-shadow for visual balance.
+-  I used position: absolute along with ::before to highlight a featured plan without extra HTML.
+-  I added interactivity with :hover and transform animations for smooth scaling on user focus.
+
+ From exercise 3:
+-  I learned how to structure a semantic hero layout using <header>, <nav>, and grouped content.
+-  I applied display: flex to position text and images side-by-side responsively.
+-  I practiced using position: sticky and z-index to create a scroll-aware nav bar that stays visible.
+-  I styled links with inline-block display mode and customized hover interactions.
+-  I wrote a responsive media query to reflow the layout vertically on smaller screens.
+
+*/
